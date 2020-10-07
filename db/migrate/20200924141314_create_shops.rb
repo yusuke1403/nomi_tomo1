@@ -1,18 +1,19 @@
 class CreateShops < ActiveRecord::Migration[6.0]
   def change
-    t.string :name
-    t.string :englishname
-    t.string :address
-    t.decimal :evaluation, :precision => 2, :scale => 1
-    t.string :mood
-    t.string :price
-    t.string :power
-    t.string :open_time
-    t.string :close_time
-    t.string :holiday
-    t.decimal :latitude, :precision => 9, :scale => 6
-    t.decimal :longitude, :precision => 9, :scale => 6
-    t.timestamps
+    create_table :shops do |t|
+      t.string :name
+      t.string :name_kana
+      t.string :address
+      t.string :category
+      t.string :tel
+      t.string :open_time
+      t.string :holiday
+      t.decimal :latitude, :precision => 9, :scale => 6
+      t.decimal :longitude, :precision => 9, :scale => 6
+      t.string :pr_short
+      t.text :pr_long
+      t.string :url
+      t.timestamps
     end
   end
 end
