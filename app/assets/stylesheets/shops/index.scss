@@ -1,0 +1,14 @@
+.main {
+  background: #a18989;
+  padding: 15px;
+  /*背景画像の設定*/
+  background-image: url(tyotin.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color:rgba(255,255,255,0.8);
+}
+
+#map{
+  height: 500px;
+  margin: 50px;
+}

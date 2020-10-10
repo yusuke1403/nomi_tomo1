@@ -49,3 +49,5 @@ gem 'devise'
 gem "geocoder"
 gem 'dotenv-rails'
 gem 'pry-rails'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'

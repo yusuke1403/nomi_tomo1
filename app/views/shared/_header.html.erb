@@ -1,15 +1,30 @@
 <header class="header">
-  <div class="header__bar row">
-    <h1 class="grid-6"><a href="/">nomi_tomo</a></h1>
-    <% if user_signed_in? %>
-      <div class="user_nav grid-6">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </div>
-    <% else %>
-      <div class="grid-6">
-        <%= link_to "ログイン", new_user_session_path, class: "post" %>
-        <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-      </div>
-    <% end %>
-  </div>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">nomi_tomo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <% if user_signed_in? %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        </ul>
+      <% else %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+          </li>
+        </ul>
+      <% end %>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 </header>
