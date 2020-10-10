@@ -1,14 +1,19 @@
-.main {
-  background: #a18989;
-  padding: 15px;
-  /*背景画像の設定*/
-  background-image: url(tyotin.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-color:rgba(255,255,255,0.8);
+.main_map {
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
 }
 
 #map{
-  height: 500px;
-  margin: 50px;
+  height: 450px;
+  width: 950px;
+
+}
+
+.card-body{
+  height: 230px;
+  width: 288px;
 }
