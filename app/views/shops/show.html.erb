@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <div class='shop-name'>
   <%= @shop.name %>
 </div>
@@ -116,6 +118,5 @@
     }
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>
 
 <%= link_to 'Back', shops_path %>

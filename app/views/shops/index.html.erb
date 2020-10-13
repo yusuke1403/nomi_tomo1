@@ -8,6 +8,7 @@
   </div>
 
   <script>
+    let map;
     // 現在地取得処理
     function initMap() {
       // Geolocation APIに対応している
@@ -17,19 +18,19 @@
           // 取得成功した場合
           function(position) {
             // 緯度・経度を変数に格納
-            const mapLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            let mapLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             // マップオプションを変数に格納
-            const mapOptions = {
+            let mapOptions = {
               zoom : 14,          // 拡大倍率
               center : mapLatLng  // 緯度・経度
             };
             // マップオブジェクト作成
-            const map = new google.maps.Map(
-              document.getElementById("map"), // マップを表示する要素
+            map = new google.maps.Map(
+              document.getElementById('map'), // マップを表示する要素
               mapOptions         // マップオプション
             );
             // マップにマーカーを表示する
-            const marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
               map : map,             // 対象の地図オブジェクト
               position : mapLatLng,   // 緯度・経度
               icon: {
@@ -85,15 +86,18 @@
                 alert("その他のエラー(エラーコード:"+error.code+")");
                 break;
             }
+          },
+
+          {
+            enableHighAccuracy: true,
           }
         );
-        // Geolocation APIに対応していない
       } else {
+        // Geolocation APIに対応していない
         alert("この端末では位置情報が取得できません");
       }
     }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>
 
   <div class="album py-5 bg-light">
     <div class="container">
