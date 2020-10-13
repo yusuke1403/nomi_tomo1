@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "top#index"
   devise_for :users
   resources :shops, only: [:index, :show] do
-    resources :rooms, only: [:index, :new, :create] do
+    resources :rooms, only: [:index, :new, :create, :show] do
       resources :messages, only: [:index, :create]
     end
   end

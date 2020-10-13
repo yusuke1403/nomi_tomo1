@@ -1,3 +1,16 @@
+<%= render "shared/header_show" %>
+
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "shared/side_bar" %>
+  </div>
+  <div class="chat">
+    <%= render "shared/main_chat" %>
+  </div>
+</div>
+
+
+
 <div class="chat__wrapper">
   <div class="chat__content">
     <% @messages.each do |message| %>

@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :set_shop
 
   def index
-    @rooms = Room.all
+    @rooms = Room.all.order(:id)
   end
 
   def new
@@ -10,15 +10,24 @@ class RoomsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @room = Room.new(room_params)
     if @room.save
-      redirect_to root_path
+      redirect_to action: :index
     else
       render :new
     end
   end
 
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to :index
+  end
+
+  def show
+    @room = Room.find(params[:id])
+    @messages = @room.messages
+  end
 
   private
 
@@ -27,6 +36,6 @@ class RoomsController < ApplicationController
   end
 
   def room_params
-    params.require(:room).permit(:name, user_ids: [])
+    params.require(:room).permit(:name, user_ids: []).merge(shop_id: params[:shop_id])
   end
 end
