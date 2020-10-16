@@ -39,6 +39,12 @@
 
 <%= link_to 'チャットルームへ', shop_rooms_path(@shop), class: "chat-room" %>
 
+<% if !Favorite.exists?(user_id:current_user.id,shop_id:@shop.id) %>
+  <%= link_to "お気に入り",shop_favorites_path(@shop),method: :post %>
+<% else %>
+  <%= link_to "お気に入り解除",shop_favorites_path(@shop),method: :delete %>
+<% end %>
+
 <h2>gmap</h2>
 
 <div id='map'>

@@ -1,6 +1,10 @@
 class Shop < ApplicationRecord
-  has_many :shops
+  has_many :rooms
   has_many :images, dependent: :destroy
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+  has_many :users, through: :favorites, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+
+  def favorite_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end
