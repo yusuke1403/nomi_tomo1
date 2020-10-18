@@ -51,3 +51,7 @@ gem 'dotenv-rails'
 gem 'pry-rails'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem "aws-sdk-s3", require: false
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
