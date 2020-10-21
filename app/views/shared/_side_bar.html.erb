@@ -1,6 +1,6 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <%= current_user.nickname %>
+    <%= link_to current_user.nickname, "/users/#{current_user.id}" %>
   </div>
   <div class="create-room">
     <%= link_to "チャットを作成する", new_shop_room_path %>
@@ -11,7 +11,7 @@
   <% @rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <%= link_to room.name, shop_room_messages_path(room.shop_id, room.id) %></a>
+        <%= link_to room.name, shop_room_messages_path(room.shop_id, room.id) %>
       </div>
     </div>
   <% end %>

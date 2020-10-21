@@ -170,6 +170,7 @@
     .chat__message__right {
       display: flex;
       flex-direction: row-reverse;
+      margin-bottom: 10px;
 
       #message__right__user__image {
         width: 50px;
@@ -199,7 +200,12 @@
         }
       }
     }
-    
+
+    .message-image-right{
+      display: flex;
+      margin-left: auto;
+    }
+
     .message__right__created {
       font-size: 14px;
       margin-bottom: 20px;
@@ -233,6 +239,10 @@
   margin-top: -15px;
   border: 15px solid transparent;
   border-right: 15px solid #e0edff;
+}
+.message-image-left{
+  display: flex;
+  margin-left: auto;
 }
 
 .message__left__created {

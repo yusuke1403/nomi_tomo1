@@ -23,7 +23,9 @@
               <div class="chat__message__right__content">
                 <%= message.content %> 
               </div>
-              <%# image_tag message.image.to_s.variant(resize:'500x500'), class: 'message-image' if message.image.to_s.attached? %>
+            </div>
+            <div class='message-image-right'>
+              <%= image_tag message.image.to_s %>
             </div>
             <div class="message__right__created">
               <%= message.created_at.strftime("%m月%d日 %H時%M分") %>
@@ -39,6 +41,9 @@
                 <%= message.content %> 
               </div>
               <%# image_tag message.image.to_s.variant(resize:'500x500'), class: 'message-image' if message.image.to_s.attached? %>
+            </div>
+            <div class='message-image-left'>
+              <%= image_tag message.image.to_s %>
             </div>
             <div class="message__left__created">
               <%= message.created_at.strftime("%m月%d日 %H:%M") %>

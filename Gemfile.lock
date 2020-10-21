@@ -279,6 +279,7 @@ DEPENDENCIES
   dotenv-rails
   fog-aws
   geocoder
+  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
