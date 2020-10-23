@@ -1,7 +1,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <%= @room.name%>
+      <p>ルーム名：<%= @room.name%></p>
     </div>
   </div>
   <div class="right-header">
@@ -34,9 +34,11 @@
         <% else %>
           <%# --相手のメッセージ-- %>
           <div class="chat__message__content" data-message-id= <%=message.id %>>
+            <div class=message__left__name>
+              <%= message.user.nickname %>
+            </div>
             <div class="chat__msessage__left">
               <%# image_tag message.user.picture.url, id: "message__left__user__image" %>
-              <%= message.user.nickname %>
               <div class="chat__message__left__content">
                 <%= message.content %> 
               </div>

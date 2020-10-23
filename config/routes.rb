@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :shops, only: [:index, :show] do
     resource :favorites, only: [:create, :destroy]
-    resources :rooms, only: [:index, :new, :create, :show] do
+    resources :rooms, only: [:index, :new, :create, :show, :destroy] do
       resources :messages, only: [:index, :create]
     end
   end

@@ -1,9 +1,16 @@
 <div class="side-bar-header">
-  <div class="header-name">
-    <%= link_to current_user.nickname, "/users/#{current_user.id}" %>
+  <div class="header-shop">
+    <%= image_tag @shop.images[0].src.to_s, class: "header-shop-img", :size =>'200x160' %>
+    <p class="header-shop-category">〜<%= @shop.category %>〜</p>
+    <p class="header-shop-name"><b><%= @shop.name %></b></p>
   </div>
-  <div class="create-room">
-    <%= link_to "チャットを作成する", new_shop_room_path %>
+  <div class="header-info">
+    <div class="header-name">
+      <%= link_to current_user.nickname, user_path(current_user.id) %>
+    </div>
+    <div class="create-room">
+      <%= link_to "チャットを作成する", new_shop_room_path %>
+    </div>
   </div>
 </div>
 

@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @shop = Shop.find(params[:shop_id])
     @room = Room.find(params[:room_id])
-    @rooms = Room.all.order(:id)
+    @rooms = @shop.rooms.all.order(id: "DESC")
     @messages = @room.messages.includes(:user)
   end
 

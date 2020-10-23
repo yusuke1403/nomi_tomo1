@@ -6,6 +6,7 @@ class FavoritesController < ApplicationController
   def create
     if Favorite.create(user_id: @user.id,shop_id:@shop.id)
       flash[:success] = "登録完了しました！"
+      redirect_to shop_path(@shop.id)
     else
         redirect_to root_path
     end
@@ -15,6 +16,7 @@ class FavoritesController < ApplicationController
     if favorite=Favorite.find_by(user_id: @user.id,shop_id:@shop.id)
       favorite.delete
       flash[:success] = "登録解除しました！"
+      redirect_to shop_path(@shop.id)
     else
       redirect_to root_path
     end

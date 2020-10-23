@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :set_shop
 
   def index
-    @rooms = Room.all.order(:id)
+    @rooms = @shop.rooms.all.order(id: "DESC")
   end
 
   def new
