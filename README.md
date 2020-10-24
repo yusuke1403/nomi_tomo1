@@ -14,7 +14,7 @@
 
 - お気に入り機能の搭載で、行きつけのお店をお気に入り登録出来て、マイページより一覧で表示されます。お店探しをより円滑にします！
 
-![](https://user-images.githubusercontent.com/69718302/97077386-448f3d00-161e-11eb-9f04-7c1cc28e6623.png)
+![](https://user-images.githubusercontent.com/69718302/97078275-26c5d600-1626-11eb-84f4-c82c620cb1fb.png)
 
 ![](https://user-images.githubusercontent.com/69718302/97077605-288c9b00-1620-11eb-9080-93a879a88d3c.png)
 
