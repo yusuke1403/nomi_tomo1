@@ -19,7 +19,7 @@
 
 ![](https://user-images.githubusercontent.com/69718302/97078275-26c5d600-1626-11eb-84f4-c82c620cb1fb.png)
 
-![](https://user-images.githubusercontent.com/69718302/97077605-288c9b00-1620-11eb-9080-93a879a88d3c.png)
+![](https://user-images.githubusercontent.com/69718302/97081742-64832880-163f-11eb-8116-3b564aa96ea7.png)
 
 
 - 店舗ごとのチャット機能の実装により、行きつけの常連間の出会いの場としてのやりとりが可能です！<br>
