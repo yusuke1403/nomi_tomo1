@@ -12,16 +12,16 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to :index
+      redirect_to action: :index
     else
-      render :new
+      render action: :new
     end
   end
 
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    redirect_to :index
+    redirect_to action: :index
   end
 
   def show
