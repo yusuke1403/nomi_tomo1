@@ -1,28 +1,32 @@
-<%= render "shared/header_main" %>
+<%= render "shared/header_mypage" %>
 
-<div class="album py-5 bg-light">
-  <div class="container">
+<div class="mypage">
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-    <div class="row">
-      <% if @favorite_list.present? %>
-        <% @favorite_list.each do |shop| %>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <%= image_tag shop.images[0].src.to_s, class: "card-img-top", :size =>'288x230' %>
-              <div class="card-body">
-                <p class="card-text"><b><%= shop.name %></b></p>
-                <p class="card-text">〜<%= shop.category %>〜</p>
-                <p class="card-text">住所：<%= shop.address %></p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <%= link_to "詳細", shop_path(shop.id), method: :get, class: "btn btn-sm btn-outline-secondary" %>
+      <div class="row">
+        <% if @favorite_list.present? %>
+          <% @favorite_list.each do |shop| %>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <%= image_tag shop.images[0].src.to_s, class: "card-img-top", :size =>'288x230' %>
+                <div class="card-body">
+                  <p class="card-text"><b><%= shop.name %></b></p>
+                  <p class="card-text">〜<%= shop.category %>〜</p>
+                  <p class="card-text">住所：<%= shop.address %></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <%= link_to "詳細", shop_path(shop.id), method: :get, class: "btn btn-sm btn-outline-secondary" %>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<%= render "shared/footer" %>
