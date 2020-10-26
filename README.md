@@ -12,7 +12,7 @@
 
 
 
-![](https://user-images.githubusercontent.com/69718302/97077462-e020ad80-161e-11eb-82d1-bb74d5abecd0.png)
+![](https://user-images.githubusercontent.com/69718302/97077462-e020ad80-161e-11eb-82d1-bb74d5abecd0.png)<br>
 
 
 
@@ -20,13 +20,13 @@
 
 ![](https://user-images.githubusercontent.com/69718302/97078275-26c5d600-1626-11eb-84f4-c82c620cb1fb.png)
 
-![](https://user-images.githubusercontent.com/69718302/97081742-64832880-163f-11eb-8116-3b564aa96ea7.png)
+![](https://user-images.githubusercontent.com/69718302/97081742-64832880-163f-11eb-8116-3b564aa96ea7.png)<br>
 
 
 - 店舗ごとのチャット機能の実装により、行きつけの常連間の出会いの場としてのやりとりが可能です！<br>
 (画像アップロード機能 carrierwave 使用)
 
-![](https://user-images.githubusercontent.com/69718302/97077967-2a0b9280-1623-11eb-9532-a81c13f25752.png)
+![](https://user-images.githubusercontent.com/69718302/97077967-2a0b9280-1623-11eb-9532-a81c13f25752.png)<br>
 
 ### その他機能
 
