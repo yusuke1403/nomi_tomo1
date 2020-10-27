@@ -10,13 +10,9 @@
 ## 機能のご紹介
 
 ### 主な機能
-- MAP機能(Google Cloud Platformサービス maps javascriput API使用)<br>
-現在地から周辺の居酒屋をMAP上で探す事が出来ます！<br>
-- 吹き出し<br>
-居酒屋アイコンをクリックするとお店情報が表示され、リンクから詳細ページへ遷移します。<br>
-
-
-
+- **MAP機能(Google Cloud Platformサービス maps javascriput API使用)<br>**
+&emsp;現在地から周辺の居酒屋をMAP上で探す事が出来ます！<br>
+&emsp;居酒屋アイコンをクリックするとお店情報が吹き出し表示され、リンクから詳細ページへ遷移します。<br>
 
 ![](https://user-images.githubusercontent.com/69718302/97077462-e020ad80-161e-11eb-82d1-bb74d5abecd0.png)<br>
 
