@@ -5,30 +5,38 @@
 - 現在地から周辺の居酒屋を検索でき、行きつけとなるお店探しが可能です。お店専用のチャットルームがあり、同じ行きつけとなる者同士のコミュニティーツールとして使用できます。
 
 ## 工夫した点
+**ローカル環境にdockerコンテナを使用<br>**
+&emsp;&emsp;今アプリに関しましては、Rails6環境の構築を行いました。Rails6からWebpackが導入され、Rails5とは少し手順が異なるのでそこも考慮しました。(nodejsとyarnのインストール)
+**UIのこだわり<br>**
+&emsp;&emsp;MAP上のアイコンや吹き出しといった何気ない箇所においても、コンセプトに沿ったUI設計を意識しております。
 
 
 ## 機能のご紹介
 
 ### 主な機能
-- **MAP機能(Google Cloud Platformサービス maps javascriput API使用)<br>**
-&emsp;現在地から周辺の居酒屋をMAP上で探す事が出来ます！<br>
-&emsp;居酒屋アイコンをクリックするとお店情報が吹き出し表示され、リンクから詳細ページへ遷移します。<br>
+**1）MAP機能(Google Cloud Platformサービス maps javascriput API使用)<br>**
+&emsp;&emsp;現在地から周辺の居酒屋をMAP上で探す事が出来ます！<br>
+&emsp;&emsp;居酒屋アイコンをクリックするとお店情報が吹き出し表示され、リンクから詳細ページへ遷移します。<br>
 
 ![](https://user-images.githubusercontent.com/69718302/97077462-e020ad80-161e-11eb-82d1-bb74d5abecd0.png)<br>
 
 
-
-- お気に入り機能の搭載で、行きつけのお店をお気に入り登録出来て、マイページより一覧で表示されます。お店探しを、より円滑にします！
+**2）お気に入り機能(中間テーブル使用)<br>**
+&emsp;&emsp;行きつけのお店をお気に入り登録出来て、マイページより一覧で表示されます。お店探しを、より円滑にします！<br>
 
 ![](https://user-images.githubusercontent.com/69718302/97078275-26c5d600-1626-11eb-84f4-c82c620cb1fb.png)
 
 ![](https://user-images.githubusercontent.com/69718302/97081742-64832880-163f-11eb-8116-3b564aa96ea7.png)<br>
 
 
-- 店舗ごとのチャット機能の実装により、行きつけの常連間の出会いの場としてのやりとりが可能です！<br>
-(画像アップロード機能 carrierwave 使用)
+**3）チャット機能(中間テーブル使用)<br>**
+&emsp;&emsp;店舗ごとのチャット機能の実装により、行きつけの常連間の出会いの場としてのやりとりが可能です！<br>
+**4）画像アップロード機能(carrierwave使用)<br>**
+&emsp;&emsp;画像投稿時、ローカル環境はlocalファイルに、本番環境はAWS S3を使う様設定してます。
+**5）リアルタイム通信(Action Cable使用)<br>**
+&emsp;&emsp;メッセージを送信したとき、即時に更新されます。(今後実装予定)
 
-![](https://user-images.githubusercontent.com/69718302/97077967-2a0b9280-1623-11eb-9532-a81c13f25752.png)<br>
+![](https://user-images.githubusercontent.com/69718302/97256160-a4bbf400-1855-11eb-8fe5-cb0663030055.png)<br>
 
 ### その他機能
 
@@ -45,6 +53,8 @@
 - Action Cableを用いた、リアルタイム通信
 
 - ナビ機能(googlemap URLスキーム)
+
+- レスポンシブ化
 
 ## 環境選定
 
