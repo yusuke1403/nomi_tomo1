@@ -6,7 +6,7 @@
 
 ## 工夫した点
 **●ローカル環境にdockerコンテナを使用<br>**
-&emsp;&emsp;今アプリに関しましては、Rails6環境の構築を行いました。Rails6からWebpackが導入され、Rails5とは少し手順が異なるのでそこも考慮しました。(nodejsとyarnのインストール)<br>
+&emsp;&emsp;今アプリに関しましては、Rails6環境の構築を行いました。Rails6からWebpackが導入され、Rails5とは少し手順が異なるのでそこも考慮しました。(nodejsとyarnのインストール)<br><br>
 **●UIのこだわり<br>**
 &emsp;&emsp;MAP上のアイコンや吹き出しといった何気ない箇所においても、コンセプトに沿ったUI設計を意識しております。<br>
 
