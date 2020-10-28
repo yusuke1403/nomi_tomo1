@@ -9,19 +9,38 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - mysql-data:/var/lib/mysql
-  web:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    stdin_open: true
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/rails/Dockerfile
+    command: bundle exec pumactl start
     tty: true
+    stdin_open: true
     volumes:
       - .:/myapp
-    ports:
-      - "3000:3000"
+      - public-data:/myapp/public
+      - tmp-data:/myapp/tmp
+      - log-data:/myapp/log
+      - sockets:/myapp/tmp/sockets
+    privileged: true
     depends_on:
       - db
-    stdin_open: true
-    tty: true
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - '80:80'
+    volumes:
+      - public-data:/myapp/public
+      - tmp-data:/myapp/tmp
+      - sockets:/myapp/tmp/sockets
+    depends_on: 
+      - app
 volumes:
   mysql-data:
     driver: local
+  public-data:
+  tmp-data:
+  log-data:
+  sockets:

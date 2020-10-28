@@ -10,6 +10,11 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 
+RUN mkdir -p tmp/sockets
+
+VOLUME /app/public
+VOLUME /app/tmp
+
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
